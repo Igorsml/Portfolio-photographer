@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="./assets/img/favicon.ico" sizes="any">
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <!-- Svg sprite -->
+  <svg style="display:none">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="fb">
+      <path
+        d="M13.04 29.333L13 17.666H8v-5h5V9.333c0-4.493 2.787-6.667 6.8-6.667 1.92 0 3.573.133 4.053.2v4.707h-2.787c-2.173 0-2.6 1.04-2.6 2.56v2.533h6.2l-1.667 5h-4.533v11.667h-5.427.001z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="hamburger_unvisited">
+      <path d="M0 11h50v3.111H0V11zM0 23.444h50v3.112H0v-3.112zM0 35.889h50V39H0v-3.111z"></path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 50" id="image">
+      <g clip-path="url(#clip0_6_146)">
+        <path
+          d="M0 48.503V1.497A2.397 2.397 0 012.399 0h-.008 61.336a2.248 2.248 0 012.427 2.436l.001-.008v45.327a1.99 1.99 0 01-1.978 2.211l-.09-.002h.004H2.645a2.533 2.533 0 01-2.64-1.444l-.007-.016.002-.002zm62.066-44.36H4.125v27.949l.639-.438 11.227-8.05a2.184 2.184 0 011.552-.644c.607 0 1.155.246 1.552.644l11.793 8.452c1.825 1.314 3.651 2.629 5.476 3.907a1.99 1.99 0 003.118-1.008l.004-.014a2.06 2.06 0 00-.975-2.368l-.01-.005a380.063 380.063 0 01-7.466-5.385l-.566-.42.329-.256 10.168-7.302a2.184 2.184 0 011.552-.644c.607 0 1.155.246 1.552.644l17.342 12.45.639.42.015-27.931z">
+        </path>
+        <path
+          d="M26.962 9.346a5.476 5.476 0 015.476 5.476 5.476 5.476 0 11-10.801-.033l-.005.032v-.002a5.476 5.476 0 015.323-5.474h.008l-.001.001z">
+        </path>
+      </g>
+      <defs>
+        <clipPath id="clip0_6_146">
+          <path d="M0 0h66v50H0z"></path>
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="inst">
+      <path
+        d="M17.36 2.667c2.4 0 2.907.027 4.133.08 1.413.067 2.387.293 3.227.627.88.333 1.627.8 2.36 1.533.747.733 1.2 1.48 1.547 2.36.333.84.547 1.813.613 3.24.067 1.267.08 1.76.08 4.427v2.133c0 2.667-.013 3.16-.08 4.427a9.763 9.763 0 01-.636 3.294l.022-.067c-.347.88-.8 1.627-1.533 2.36a6.632 6.632 0 01-2.373 1.547c-.84.333-1.813.547-3.227.613-1.267.067-1.773.08-4.44.08h-2.12c-2.667 0-3.16-.013-4.44-.08a9.763 9.763 0 01-3.294-.636l.067.022a6.575 6.575 0 01-2.359-1.533l-.001-.001a6.544 6.544 0 01-1.532-2.329l-.015-.045a9.59 9.59 0 01-.613-3.217v-.01a70.693 70.693 0 01-.08-4.167v.034-2.733c0-2.4.027-2.907.08-4.133.067-1.413.293-2.387.613-3.227.347-.88.8-1.627 1.547-2.36a6.27 6.27 0 012.317-1.519l.043-.014a9.576 9.576 0 013.215-.626h.012c1.227-.053 1.733-.08 4.133-.08h2.734zm.027 2.4H14.6c-2.307 0-2.8.027-4 .08-1.293.053-2 .267-2.467.453a4.068 4.068 0 00-1.533 1c-.466.467-.76.907-1 1.533-.173.467-.4 1.173-.453 2.48-.053 1.2-.08 1.68-.08 4v2.773c0 2.32.027 2.8.08 4 .053 1.293.267 2 .453 2.467.24.627.533 1.067 1 1.533.467.466.907.76 1.533 1 .467.187 1.173.4 2.48.453 1.293.067 1.76.08 4.64.08h1.48c2.893 0 3.347-.013 4.653-.08 1.293-.053 2-.267 2.467-.453a4.068 4.068 0 001.533-1c.466-.467.76-.907 1-1.533.187-.467.4-1.173.453-2.467.067-1.307.08-1.76.08-4.653v-1.467c0-2.893-.013-3.36-.08-4.667-.053-1.293-.267-2-.453-2.467a4.142 4.142 0 00-.999-1.532l-.001-.001a4.141 4.141 0 00-1.505-.991l-.028-.009a7.322 7.322 0 00-2.462-.453h-.005a70.03 70.03 0 00-4.03-.08h.03l.001.001zM16 9.147a6.847 6.847 0 110 13.694 6.847 6.847 0 010-13.694zm0 2.4a4.447 4.447 0 100 8.894 4.447 4.447 0 000-8.894zm7.107-4.267a1.6 1.6 0 110 3.2 1.6 1.6 0 010-3.2z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="logo">
+      <path
+        d="M20.45 5.26c-1.358.437-2.504 1.217-2.79 1.896l-.12.286-1.884-.009-.244-.503c-.187-.383-.349-.56-.686-.743l-.44-.241h-3.18c-4.171 0-4.697.207-4.697 1.858v.464l-.71.347c-2.615 1.277-4.664 3.801-5.473 6.74l-.226.82v10.083c0 11.012-.033 10.3.547 11.859 1.301 3.492 4.316 6.018 8.002 6.709 1.24.232 31.662.232 32.902 0 3.686-.69 6.701-3.216 8.002-6.71.58-1.558.547-.846.547-11.858V16.175l-.217-.772c-1.134-4.038-4.04-6.791-8.149-7.724-.614-.14-1.42-.174-4.958-.21l-4.223-.045-.116-.277c-.287-.681-1.516-1.501-2.87-1.914-1.068-.325-7.991-.305-9.016.026zm19.61 5.562c2.993.304 5.326 2.13 6.338 4.965l.275.772.028 9.312c.032 10.648.064 10.15-.777 11.863-.948 1.928-2.86 3.386-4.995 3.811-1.143.228-30.718.228-31.858 0-2.155-.43-4.06-1.917-5.062-3.95-.764-1.552-.742-1.188-.71-11.724l.028-9.312.304-.843c.977-2.7 3.365-4.6 6.143-4.887 1.185-.122 29.078-.13 30.286-.008v.001zM9.517 11.888c-3.138.454-5.163 3.006-5.163 6.51v1.297h6.712l.225-.458c.993-2.025 2.993-4.22 5.145-5.65.804-.535 2.925-1.61 3.175-1.61.058 0 .105-.044.105-.098 0-.118-9.37-.111-10.199.008v.001zm20.767-.033c0 .045.165.14.367.21 3.07 1.064 6.811 4.405 8.088 7.221l.186.41h6.722V18.4c0-3.27-1.513-5.415-4.5-6.382-.589-.19-10.862-.343-10.862-.161l-.001-.001zm-6.213.663c-11.405 1.098-16.939 13.457-9.978 22.28 7.696 9.753 23.784 4.904 24.793-7.474.675-8.29-6.633-15.593-14.815-14.806zm2.593 3.427c6.569.93 10.664 8.018 8.164 14.132-2.88 7.045-12.12 8.85-17.414 3.403-7.023-7.226-.832-18.961 9.25-17.534zm-2.792 1.627c-5.91.823-9.319 6.775-6.983 12.198 2.68 6.224 11.672 6.996 15.487 1.33 4.175-6.2-1.081-14.56-8.504-13.528zm3.845 1.338c1.141.35 1.995 1.167 2.015 1.927.046 1.752-3.503 1.696-4.69-.073-.903-1.345.705-2.459 2.675-1.854zM22.7 32.255c1.081.225 2.691 1.2 2.691 1.63 0 1.002-3.634.354-4.695-.836-.733-.825.16-1.178 2.004-.794zM41.913 36c-2.02.618-1.628 3.387.477 3.38 2.14-.006 2.3-3.116.174-3.406-.215-.03-.508-.017-.651.027z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 50" id="mic">
+      <g clip-path="url(#clip0_6_107)">
+        <path
+          d="M4.371 50v-2.898h10.216V40.93C6.391 40.113.038 33.272 0 24.938v-.004h2.881a13.08 13.08 0 005.526 10.647l.041.027a12.547 12.547 0 007.511 2.474c.237 0 .473-.007.708-.019l-.033.001c6.993-.339 12.543-6.06 12.606-13.091v-.006h2.898v.111a15.68 15.68 0 01-4.233 10.737l.008-.009a15.886 15.886 0 01-10.268 5.12l-.063.005v6.09h10.249v2.947L4.371 50z">
+        </path>
+        <path
+          d="M26.326 11.706v4.404H19.04v2.914h7.269v4.388h-7.253v2.947h7.138c-.719 5.01-4.982 8.818-10.134 8.818s-9.415-3.808-10.128-8.763l-.006-.055h7.171v-2.898H5.861v-4.404h7.236v-2.931H5.861v-4.371h7.236V8.792H5.959C6.724 3.832 10.963.078 16.078.078c5.109 0 9.344 3.745 10.109 8.64l.007.058h-7.155v2.931l7.287-.001z">
+        </path>
+      </g>
+      <defs>
+        <clipPath id="clip0_6_107">
+          <path d="M0 0h32v50H0z"></path>
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="pinterest">
+      <path
+        d="M16 2.667C8.657 2.694 2.714 8.653 2.714 16c0 5.599 3.452 10.393 8.343 12.368l.089.032c-.133-1.053-.227-2.667.04-3.827l1.56-6.627s-.4-.8-.4-1.973c0-1.853 1.08-3.227 2.427-3.227 1.133 0 1.693.853 1.693 1.867 0 1.147-.733 2.853-1.12 4.44-.32 1.333.667 2.413 1.987 2.413 2.373 0 4.187-2.493 4.187-6.093 0-3.2-2.293-5.413-5.573-5.413a5.773 5.773 0 00-6.026 5.767v.006c0 1.147.44 2.373.987 3.04.107.133.12.253.08.387l-.373 1.507c-.053.24-.2.307-.44.187-1.68-.787-2.72-3.2-2.72-5.173 0-4.2 3.067-8.053 8.827-8.053 4.613 0 8.227 3.28 8.227 7.693 0 4.6-2.907 8.293-6.933 8.293-1.333 0-2.613-.707-3.04-1.533l-.84 3.16a14.615 14.615 0 01-1.688 3.563l.034-.056c1.17.372 2.516.587 3.911.587 7.364 0 13.333-5.97 13.333-13.333 0-7.347-5.942-13.306-13.282-13.333h-.003L16 2.667z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 130" id="Play_hover">
+      <path
+        d="M58.521.136c-.5.12-2.951.55-5.448.955C6.174 8.698-16.008 65.904 13.026 104.367c9.042 11.977 29.806 25.539 30.835 20.139.129-.674-1.108-1.528-4.176-2.882-12.586-5.559-23.975-16.512-30.19-29.03-22.57-45.466 16.045-96.917 66.47-88.565 7.575 1.255 8.89-1.361 1.467-2.918C74.053.403 60.344-.304 58.52.136zm.303 13.407c-8.868 1.306-20.279 5.847-20.279 8.068 0 1.724 1.281 1.59 5.961-.62 25.636-12.113 56.848 1.14 66.134 28.08 15.435 44.781-35.52 82.689-74.213 55.208-21.5-15.27-26.459-45.6-11.024-67.44 4.096-5.795 1.94-8.245-2.242-2.548-25.769 35.106 1.135 84.691 44.61 82.216 43.887-2.499 64.87-55.086 34.67-86.888-11.072-11.658-28.932-18.241-43.617-16.078v.002zm52.764 7.906c-.9.9-.212 2.511 2.669 6.255 21.363 27.754 14.369 69.239-14.963 88.756-13.217 8.795-24.822 11.232-46.523 9.773-2.044-.137-2.422.019-2.422 1.004 0 4.474 25.975 3.261 38.854-1.815 37.765-14.883 52.655-62.927 29.891-96.448-4.32-6.36-6.492-8.539-7.506-7.525zM47.265 44.11c-1.074 1.185-1.166 2.576-1.33 20.092-.27 28.797-3.137 27.926 31.634 9.608 16.945-8.928 17.04-8.648-7.263-21.397-19.002-9.967-20.911-10.656-23.041-8.303zm20.999 10.894c18.462 9.643 18.558 9.703 17.267 10.775C84.083 66.982 51.16 84 50.285 84c-.704 0-.844-3.165-.844-19.068 0-13.375.198-19.068.661-19.068.363 0 8.537 4.114 18.162 9.141z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="tw">
+      <path
+        d="M29.333 7.84c-1 .493-2 .667-3.173.827 1.173-.667 2-1.667 2.333-3a10.755 10.755 0 01-3.423 1.322l-.07.012a5.795 5.795 0 00-3.996-1.667H21c-2.84 0-5.333 2.507-5.333 5.507 0 .493 0 .827.173 1.16A15.317 15.317 0 014.529 6.362l-.022-.028a5.012 5.012 0 00-.666 2.855l-.001-.015a5.466 5.466 0 002.473 4.481l.021.013c-.84 0-1.667-.333-2.507-.667 0 2.667 1.84 4.84 4.333 5.333-.493.173-1 .173-1.493.173-.333 0-.667 0-1-.173.667 2.173 2.667 3.84 5.173 3.84a10.535 10.535 0 01-6.637 2.335l-.213-.002h.011-1.333c2.365 1.509 5.236 2.429 8.316 2.493h.017c10 0 15.507-8.333 15.507-15.507v-.667a9.777 9.777 0 002.803-2.944l.024-.042h-.002z">
+      </path>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 50" id="video-icon">
+      <g clip-path="url(#clip0_6_144)">
+        <path
+          d="M59.843 1.307v47.474a2.268 2.268 0 01-2.221 1.254l.008.001H2.194A1.986 1.986 0 010 47.831l-.001.009V2.161A1.986 1.986 0 012.185.002L2.176.001h55.436a2.145 2.145 0 012.225 1.292l.005.014h.001zM22.544 24.983v5.592c.001.366.052.72.146 1.056l-.007-.028a2.392 2.392 0 002.226 1.525c.51 0 .983-.16 1.371-.433l-.008.005c3.328-1.916 6.62-3.85 9.913-5.801a2.144 2.144 0 00.011-3.775l-.011-.006c-3.293-2.021-6.672-3.955-10.052-5.906a2.369 2.369 0 00-3.605 2.167v-.007c.122 1.864.017 3.746.017 5.61l-.001.001zM9.443 6.551V3.572H3.572v2.979h5.871zM3.484 46.376h5.958v-2.927H3.484v2.927zM18.833 3.571h-5.767v2.962h5.767V3.571zm3.623 0v2.962h5.784V3.484l-5.784.087zm15.157 2.98V3.572h-5.767v2.962l5.767.017zm9.425-2.98h-5.819v2.962h5.819V3.571zm-9.407 42.823v-2.84h-5.784v2.927l5.784-.087zm-18.816 0v-2.84h-5.767v2.927l5.767-.087zm9.425 0v-2.84h-5.767v2.944l5.767-.104zm18.798-2.945h-5.819v2.927h5.819v-2.927zm9.251-36.898V3.485h-5.662v3.066h5.662zm0 36.898h-5.662v2.944h5.679l-.017-2.944z">
+        </path>
+      </g>
+      <defs>
+        <clipPath id="clip0_6_144">
+          <path d="M0 0h60v50H0z"></path>
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 50" id="camera">
+      <g clip-path="url(#clip0_6_114)">
+        <path
+          d="M30.897 50.036H6.505l-.09.001A6.415 6.415 0 010 43.622l.001-.095v.005c.071-9.435.071-18.877 0-28.324v-.036a6.433 6.433 0 016.433-6.433h48.981a6.147 6.147 0 016.414 6.447l.001-.014v28.36a6.147 6.147 0 01-6.447 6.504l.015.001-24.501-.001zm0-6.165l.143.001c7.974 0 14.439-6.465 14.439-14.439S39.014 14.994 31.04 14.994c-7.962 0-14.418 6.444-14.439 14.4v.002c.049 7.885 6.387 14.273 14.248 14.403h.012l.036.072zM12.384 19.049a2.11 2.11 0 00-2.071-2.037h-.002a2.055 2.055 0 100 4.11 2.11 2.11 0 002.073-2.071v-.002zM42.28 6.165H19.532c.357-1.43.679-2.806 1.036-4.182a2.163 2.163 0 012.55-1.98L23.105 0h15.833a2.074 2.074 0 012.286 1.776l.001.011c.34 1.287.661 2.573.983 3.86.036.161.036.322.071.518h.001z">
+        </path>
+        <path
+          d="M30.861 43.799c-7.959-.021-14.402-6.477-14.402-14.439 0-7.974 6.465-14.439 14.439-14.439s14.439 6.465 14.439 14.439l-.001.151v-.008c-.121 7.909-6.551 14.277-14.473 14.296h-.002zm0-4.128c5.695 0 10.311-4.616 10.311-10.311s-4.616-10.311-10.311-10.311c-5.682 0-10.291 4.596-10.311 10.273v.074c0 5.675 4.6 10.275 10.275 10.275l.113-.001h-.006l-.071.001z">
+        </path>
+        <path
+          d="M12.384 19.049a2.11 2.11 0 01-2.034 2.073h-.004a2.055 2.055 0 110-4.11 2.11 2.11 0 012.037 2.034v.004l.001-.001z">
+        </path>
+        <path
+          d="M31.129 21.14c4.378.144 7.89 3.661 8.023 8.03v.012a2.127 2.127 0 01-1.996 2.252h-.024a2.073 2.073 0 01-2.073-2.073 4.2 4.2 0 00-4.087-4.128h-.006l-.056.001a2.037 2.037 0 01-2.037-2.037l.002-.095v.004a2.075 2.075 0 012.26-1.966h-.008.002z">
+        </path>
+      </g>
+      <defs>
+        <clipPath id="clip0_6_114">
+          <path d="M0 0h62v50H0z"></path>
+        </clipPath>
+      </defs>
+    </symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 50 50" id="close">
+      <path stroke="#fff" stroke-width="2"
+        d="M3.652 46.691L24.52 25.824m0 0L47.344 3M24.52 25.824L46.69 47.996M24.52 25.824L3 4.304"></path>
+    </symbol>
+  </svg>
+  <!-- /Svg sprite  -->
+  <div class="wrapper">
+    <header class="header">
+      <div class="container header-container">
+        <a class="logo">
+          <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20.4506 5.25918C19.0919 5.69691 17.9456 6.47652 17.6601 7.15634L17.5398 7.4419L15.6561 7.43301L15.4116 6.93006C15.2253 6.54668 15.063 6.3708 14.7263 6.18701L14.2864 5.94591H11.1062C6.93498 5.94591 6.40895 6.15341 6.40895 7.80355V8.26796L5.69955 8.61478C3.08441 9.8924 1.03538 12.416 0.225789 15.3546L0.000346207 16.1748V26.2584C0.000346207 37.2698 -0.0327188 36.5584 0.547422 38.1166C1.84798 41.6086 4.86291 44.1352 8.54916 44.8258C9.78859 45.0581 40.2114 45.0581 41.4508 44.8258C45.1371 44.1362 48.152 41.6096 49.4526 38.1166C50.0327 36.5584 49.9997 37.2698 49.9997 26.2584V16.1748L49.7832 15.4031C48.649 11.3647 45.7433 8.61182 41.6342 7.67905C41.02 7.53972 40.2134 7.50514 36.6765 7.46858L32.4532 7.42412L32.3369 7.14745C32.0504 6.46565 30.8209 5.64553 29.4663 5.23349C28.3992 4.9084 21.4756 4.92816 20.4506 5.25918ZM40.0601 10.8222C43.053 11.1256 45.3856 12.9526 46.3976 15.7874L46.6731 16.5591L46.7012 25.871C46.7332 36.5189 46.7653 36.0218 45.9236 37.7342C44.9758 39.662 43.064 41.1205 40.9288 41.5453C39.7856 41.7726 10.2114 41.7726 9.07118 41.5453C6.91594 41.1145 5.0112 39.6284 4.00923 37.5949C3.24473 36.0426 3.26677 36.4072 3.29883 25.871L3.32689 16.5591L3.63149 15.7163C4.60841 13.0168 6.9961 11.1167 9.77356 10.8291C10.9589 10.7066 38.8517 10.6997 40.0601 10.8212V10.8222ZM9.51706 11.8884C6.37889 12.3419 4.35391 14.8942 4.35391 18.398V19.6954H11.0661L11.2915 19.2369C12.2845 17.2123 14.2844 15.0167 16.4357 13.5869C17.2402 13.0524 19.3614 11.9763 19.6109 11.9763C19.669 11.9763 19.7161 11.9328 19.7161 11.8795C19.7161 11.7609 10.3457 11.7678 9.51706 11.8874V11.8884ZM30.2839 11.8548C30.2839 11.9002 30.4492 11.9951 30.6506 12.0652C33.7206 13.1294 37.462 16.4702 38.7385 19.2863L38.9249 19.6964H45.6471V18.399C45.6471 15.1284 44.1341 12.9842 41.1462 12.0168C40.5581 11.8261 30.2849 11.674 30.2849 11.8558L30.2839 11.8548ZM24.0707 12.5178C12.6663 13.6156 7.13237 25.9748 14.0931 34.7976C21.7892 44.5512 37.8768 39.7015 38.8858 27.3236C39.5611 19.0343 32.2528 11.7313 24.0707 12.5178ZM26.6638 15.9455C33.2327 16.8753 37.3277 23.963 34.8278 30.0774C31.9482 37.1216 22.708 38.9279 17.4136 33.4804C10.3908 26.2544 16.5819 14.5187 26.6638 15.9455ZM23.8723 17.5719C17.9617 18.395 14.553 24.3474 16.8885 29.7701C19.5698 35.9942 28.5605 36.7659 32.376 31.1001C36.5512 24.9007 31.2949 16.5394 23.8723 17.5719ZM27.7168 18.9098C28.8581 19.2596 29.7118 20.0768 29.7318 20.8366C29.7779 22.5886 26.2289 22.5332 25.0416 20.7635C24.1388 19.4187 25.747 18.3051 27.7168 18.9098ZM22.701 32.2552C23.7821 32.4805 25.3923 33.4557 25.3923 33.8846C25.3923 34.8865 21.7581 34.2393 20.697 33.0486C19.9636 32.2246 20.8564 31.8708 22.701 32.2552ZM41.9128 35.9991C39.8938 36.6167 40.2846 39.3863 42.3897 39.3794C44.5309 39.3725 44.6902 36.2629 42.564 35.9734C42.3486 35.9438 42.056 35.9556 41.9128 36.0001V35.9991Z" />
+          </svg>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list list__disable">
+            <li class="nav__item">
+              <a class="nav__link" href="#skills">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#video">Video</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#price">Price</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#contacts">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="language-container"><a href="#" class="language-active nav__link">en</a>
+          <a class="nav__link" href="#">ru</a></div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero" id="hero">
+        <div class="container hero-container">
+          <div class="hero-content">
+            <h1>Alexa Rise</h1>
+            <p>Save sincere emotions, romantic feelings and happy moments of life together with professional
+              photographer
+              Alexa Rise</p>
+            <button class="button button-reset">Hire me</button>
+          </div>
+        </div>
+      </section>
+      <section class="skills container" id="skills">
+        <div class="skills-container">
+          <div class="section-title-wrap">
+            <h2 class="section-title section-title__skills">Skills</h2>
+          </div>
+          <ul class="skills-list list-reset">
+            <li class="skill-item">
+              <svg class="skill-icon">
+                <use xlink:href="#camera"></use>
+              </svg>
+              <h3 class="skill-title">Digital photography</h3>
+              <p class="skill-text">High-quality photos in the studio and on the nature</p>
+            </li>
+            <li class="skill-item">
+              <svg class="skill-icon">
+                <use xlink:href="#video-icon"></use>
+              </svg>
+              <h3 class="skill-title">Video shooting</h3>
+              <p class="skill-text">Capture your moments so that they always stay with you</p>
+            </li>
+            <li class="skill-item">
+              <svg class="skill-icon">
+                <use xlink:href="#image"></use>
+              </svg>
+              <h3 class="skill-title">Retouch</h3>
+              <p class="skill-text">I strive to make photography surpass reality</p>
+            </li>
+            <li class="skill-item">
+              <svg class="skill-icon">
+                <use xlink:href="#mic"></use>
+              </svg>
+              <h3 class="skill-title">Audio</h3>
+              <p class="skill-text">Professional sounds recording for video, advertising, portfolio</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="portfolio" id="portfolio">
+        <div class="container">
+          <div class="section-title-wrap">
+            <h2 class="section-title">Portfolio</h2>
+          </div>
+          <ul class="buttons-list list-reset">
+            <li class="buttons-item"><button class="portfolio-btn button button-reset">Winter</button></li>
+            <li class="buttons-item"><button class="portfolio-btn button button-reset">Spring</button></li>
+            <li class="buttons-item"><button class="portfolio-btn button button-reset">Summer</button></li>
+            <li class="buttons-item"><button class="button button-reset">Autumn</button></li>
+          </ul>
+          <ul class="photos-list list-reset">
+            <li class="photo-item"><a href="" class="photo-link"><img src="./assets/img/portfolio-img.jpg" alt="photo1"
+                  class="photo"></a></li>
+            <li class="photo-item"><a href="" class="photo-link"><img src="./assets/img/portfolio-img-1.jpg"
+                  alt="photo2" class="photo"></a></li>
+            <li class="photo-item"><a href="" class="photo-link"><img src="./assets/img/portfolio-img-2.jpg"
+                  alt="photo3" class="photo"></a></li>
+            <li class="photo-item"><a href="" class="photo-link"><img src="./assets/img/portfolio-img-3.jpg"
+                  alt="photo4" class="photo"></a></li>
+            <li class="photo-item"><a href="" class="photo-link"><img src="./assets/img/portfolio-img-4.jpg"
+                  alt="photo5" class="photo"></a></li>
+            <li class="photo-item"><a href="" class="photo-link"><img src="./assets/img/portfolio-img-5.jpg"
+                  alt="photo6" class="photo"></a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="video" id="video">
+        <div class="container">
+          <div class="section-title-wrap">
+            <h2 class="section-title section-title__video">Video</h2>
+          </div>
+          <div class="video-container">
+            <button type="button" class="video-btn button-reset">
+              <svg class="play-icon">
+                <use xlink:href="#Play_hover"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="price" id="price">
+        <div class="container">
+          <div class="section-title-wrap">
+            <h2 class="section-title section--title__price">Price</h2>
+          </div>
+          <ul class="price-list list-reset">
+            <li class="price-item">
+              <h3 class="price-title">
+                Standard
+              </h3>
+              <span class="price-count">500 $</span>
+              <ul class="price-list-description list-reset">
+                <li class="description-item">One location</li>
+                <li class="description-item">120 photos in color</li>
+                <li class="description-item">12 photos in retouch</li>
+                <li class="description-item">Readiness 2-3 weeks</li>
+                <li class="description-item">Make up, visage</li>
+              </ul>
+              <button class="button button-reset">Order shooting</button>
+            </li>
+            <li class="price-item">
+              <h3 class="price-title">
+                Premium
+              </h3>
+              <span class="price-count">700 $</span>
+              <ul class="price-list-description list-reset">
+                <li class="description-item">One or two locations</li>
+                <li class="description-item">200 photos in color</li>
+                <li class="description-item">20 photos in retouch</li>
+                <li class="description-item">Readiness 1-2 weeks</li>
+                <li class="description-item">Make up, visage</li>
+              </ul>
+              <button class="button button-reset">Order shooting</button>
+            </li>
+            <li class="price-item">
+              <h3 class="price-title">
+                Gold
+              </h3>
+              <span class="price-count">1000 $</span>
+              <ul class="price-list-description list-reset">
+                <li class="description-item">Three locations or more</li>
+                <li class="description-item">300 photos in color</li>
+                <li class="description-item">50 photos in retouch</li>
+                <li class="description-item">Readiness 1 week</li>
+                <li class="description-item">Make up, visage, hairstyle</li>
+              </ul>
+              <button class="button button-reset">Order shooting</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="contacts-container container">
+          <div class="contacts-wrap">
+            <h2 class="contacts-title">Contact me</h2>
+            <form autocomplete="off" class="contacts-form" action="#">
+              <input class="contacts-field" type="email" name="e-mail" placeholder="E-mail">
+              <input class="contacts-field" type="tel" name="phone" placeholder="Phone">
+              <textarea class="contacts-field contacts-textarea" name="message" cols="30"
+                placeholder="Message"></textarea>
+              <button class="button button-reset">Send message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="footer-copyright">
+          <span>©</span>
+          <span>2022</span>
+          <a class="footer-link" href="https://github.com/Igorsml">github</a>
+        </div>
+        <a class="footer-link" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+        <ul class="footer-social-list list-reset">
+          <li class="social-item">
+            <a href="#">
+              <svg class="social-icon">
+                <use xlink:href="#inst"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#">
+              <svg class="social-icon">
+                <use xlink:href="#fb"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#">
+              <svg class="social-icon">
+                <use xlink:href="#tw"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="#">
+              <svg class="social-icon">
+                <use xlink:href="#pinterest"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
